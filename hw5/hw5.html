@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <title>Сонячна система</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.2/aframe.min.js"></script>
-  <script src="planet.js"></script>
   <script src="https://unpkg.com/aframe-event-set-component@5.0.0/dist/aframe-event-set-component.min.js"></script>
+  <script src="planet.js"></script>
 </head>
 <body>
 
@@ -46,7 +46,7 @@
 
   <!-- Місяць -->
   <a-sphere radius="1.7" color="#CCCCCC"
-    position="150.6 0 0"
+    planet="dist: 150e9; mass: 7.35e22; T: 27.3; name: Moon"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
   </a-sphere>
 
@@ -57,7 +57,7 @@
     animation="property: rotation; to: 0 360 0; loop: true; dur: 11000">
   </a-sphere>
 
-  <!-- Сатурн (додатково з кільцем) -->
+  <!-- Сатурн -->
   <a-entity position="400 0 0">
     <a-sphere radius="5" color="#d2b48c"
       planet="dist: 1400e9; mass: 5.683e26; T: 10759; name: Saturn"
@@ -66,8 +66,9 @@
     <a-ring color="#e0c090" radius-inner="6" radius-outer="10" rotation="90 0 0"></a-ring>
   </a-entity>
 
-  <!-- Компонент -->
+  <!-- Компонент симуляції -->
   <a-entity main></a-entity>
+
 </a-scene>
 
 </body>
