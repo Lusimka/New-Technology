@@ -10,54 +10,42 @@
 <body>
 
 <a-scene>
-  <a-sky color="#000011"></a-sky>
+  <a-sky src="../images/2k_stars_milky_way.jpg" rotation="0 -90 0"></a-sky>
 
   <a-camera position="0 0 300" wasd-controls-enabled="true">
     <a-cursor color="#0095DD"></a-cursor>
   </a-camera>
 
-  <!-- Сонце -->
   <a-sphere radius="20.510" color="yellow"
     planet="dist: 0; mass: 1.989e30; name: Sun"
     src="../images/2k_sun.jpg"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
   </a-sphere>
 
-  <!-- Меркурій -->
   <a-entity geometry="primitive: sphere; radius: 2.4"
     material="color: #888888"
     planet="dist: 57.91e9; mass: 3.3011e23; T: 87.9691; name: Mercury"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
   </a-entity>
 
-  <!-- Венера -->
   <a-entity geometry="primitive: sphere; radius: 6"
     material="color: #d4af37"
     planet="dist: 108.2e9; mass: 4.876e24; T: 224.7; name: Venus"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
   </a-entity>
 
-  <!-- Земля -->
   <a-sphere radius="6.4"
     src="../images/2k_earth_daymap.jpg"
     planet="dist: 149.6e9; mass: 6e24; T: 365; name: Earth"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
   </a-sphere>
 
-  <!-- Місяць -->
-  <a-sphere radius="1.7" color="#CCCCCC"
-    planet="dist: 150e9; mass: 7.35e22; T: 27.3; name: Moon"
-    animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
-  </a-sphere>
-
-  <!-- Марс -->
   <a-sphere radius="3.4"
     material="color: red"
     planet="dist: 227.9e9; mass: 6.4171e23; T: 686.98; name: Mars"
     animation="property: rotation; to: 0 360 0; loop: true; dur: 11000">
   </a-sphere>
 
-  <!-- Сатурн -->
   <a-entity position="400 0 0">
     <a-sphere radius="5" color="#d2b48c"
       planet="dist: 1400e9; mass: 5.683e26; T: 10759; name: Saturn"
@@ -66,7 +54,6 @@
     <a-ring color="#e0c090" radius-inner="6" radius-outer="10" rotation="90 0 0"></a-ring>
   </a-entity>
 
-  <!-- Компонент симуляції -->
   <a-entity main></a-entity>
 
 </a-scene>

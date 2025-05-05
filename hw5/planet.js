@@ -15,7 +15,7 @@ AFRAME.registerComponent('planet', {
   },
 
   init: function () {
-    this.data.T *= day; // з днів у секунди
+    this.data.T *= day; 
     this.data.pos[0] = this.data.dist;
     this.el.setAttribute('position', `${this.data.dist / 1e9} 0 0`);
     if (this.data.T !== 0) {
