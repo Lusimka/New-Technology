@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Звіт студента</title>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 	<style>
 		body {
 			font-family: 'Poppins', sans-serif;
@@ -15,6 +16,7 @@
 		}
 
 		.container {
+			position: relative;
 			max-width: 800px;
 			margin: auto;
 			background: white;
@@ -22,6 +24,31 @@
 			border-radius: 15px;
 			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 		}
+
+		.icon-link {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			width: 50px;
+			height: 50px;
+			background-color: #1e88e5;
+			color: white;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-weight: 600;
+			font-size: 14px;
+			text-decoration: none;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+			transition: background-color 0.3s, transform 0.3s;
+		}
+
+		.icon-link:hover {
+			background-color: #1565c0;
+			transform: scale(1.1);
+		}
+
 
 		h1 {
 			text-align: center;
@@ -74,6 +101,10 @@
 </head>
 <body>
 	<div class="container">
+		<a href="gen/generator.html" target="_blank" class="icon-link" title="Генератор маркерів AR.js">
+			<span>Gen</span>
+		</a>
+
 		<h1>Звіт студента групи Ім-24 Чорного Даниїла</h1>
 
 		<p>Звіт про виконані завдання:
