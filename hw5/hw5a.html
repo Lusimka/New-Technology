@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Сонячна система (AR.js)</title>
+  <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  <script src="planet.js"></script>
+</head>
+<body>
+  <a-scene vr-mode-ui="enabled: false"
+           embedded
+           renderer="logarithmicDepthBuffer: true;"
+           arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false">
+
+    <a-marker type="pattern" url="../images/pattern-ARJS.patt">
+      <a-entity rotation="-90 0 0" scale="0.01 0.01 0.01" position="0 0 0">
+        <a-sphere radius="20.510" src="../images/2k_sun.jpg"
+                  planet="dist: 0; mass: 1.989e30; name: Sun"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+        </a-sphere>
+
+        <a-entity geometry="primitive: sphere; radius: 2.4"
+                  planet="dist: 57.91e9; mass: 3.3011e23; T: 87.9691; name: Mercury"
+                  src="../images/2k_mercury.jpg"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 6000">
+        </a-entity>
+
+        <a-entity geometry="primitive: sphere; radius: 6"
+                  planet="dist: 108.2e9; mass: 4.876e24; T: 224.7; name: Venus"
+                  src="../images/2k_venus_surface.jpg"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+        </a-entity>
+
+        <a-sphere radius="6.4"
+                  planet="dist: 149.6e9; mass: 6e24; T: 365; name: Earth"
+                  src="../images/2k_earth_daymap.jpg"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
+        </a-sphere>
+
+        <a-sphere radius="3.4"
+                  planet="dist: 227.9e9; mass: 6.4171e23; T: 686.98; name: Mars"
+                  src="../images/2k_mars.jpg"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 11000">
+        </a-sphere>
+      </a-entity>
+    </a-marker>
+
+    <a-entity camera></a-entity>
+  </a-scene>
+</body>
+</html>
