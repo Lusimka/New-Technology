@@ -97,6 +97,35 @@
 			font-size: 0.9em;
 			color: #666;
 		}
+
+		.report-title {
+			text-align: center;
+			margin: 30px 0 20px;
+		}
+
+		.title-text {
+			font-size: 1.3em;
+			color: #333;
+			margin-bottom: 10px;
+		}
+
+		.highlight-link {
+			display: inline-block;
+			padding: 6px 14px;
+			color: #ffffff;
+			background: linear-gradient(to right, #1e88e5, #42a5f5);
+			border-radius: 10px;
+			text-decoration: none;
+			font-weight: 600;
+			font-size: 1.1em;
+			transition: background 0.3s, transform 0.3s;
+			box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+		}
+
+		.highlight-link:hover {
+			background: linear-gradient(to right, #1565c0, #1e88e5);
+			transform: scale(1.05);
+		}
 	</style>
 </head>
 <body>
@@ -107,8 +136,10 @@
 
 		<h1>Звіт студента групи Ім-24 Чорного Даниїла</h1>
 
-		<p>Звіт про виконані завдання:
-		<a href="https://acnsci.org/semerikov" target="_blank">Семерікова С. О.</a>:</p>
+		<div class="report-title">
+			<div class="title-text">Звіт про виконані завдання:</div>
+			<a href="https://acnsci.org/semerikov" target="_blank" class="highlight-link">Семерікова С. О.</a>
+		</div>
 
 		<ol>
 			<li><a href="hw1/hw1.html" target="_blank">Домашня робота до тижня 1</a></li>
