@@ -21,9 +21,14 @@
         <img id="brickTexture" src="../images/brick_bump.jpg" />
       </a-assets>
 
-      <a-box position="0 2 0" width="5" height="4" depth="30" src="#brickTexture"></a-box>
-      <a-box position="13 2 13" width="28" height="4" depth="2" rotation="0 5 0" src="#brickTexture"></a-box>
-      <a-box position="13 2 -13" width="28" height="4" depth="2" rotation="0 -2 0" src="#brickTexture"></a-box>
+      <a-box position="0 2 0" width="5" height="4" depth="30"
+            material="src: #brickTexture; repeat: 5 10; wrap: repeat"></a-box>
+
+      <a-box position="13 2 13" width="28" height="4" depth="2" rotation="0 5 0"
+            material="src: #brickTexture; repeat: 14 1; wrap: repeat"></a-box>
+
+      <a-box position="13 2 -13" width="28" height="4" depth="2" rotation="0 -2 0"
+            material="src: #brickTexture; repeat: 14 1; wrap: repeat"></a-box>
 
       <a-entity position="0 8 5">
         <a-camera wasd-controls-enabled="true" look-controls-enabled="true"></a-camera>
