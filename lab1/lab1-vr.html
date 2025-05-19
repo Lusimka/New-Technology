@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Lab1</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <a-entity position="0 20 50">
+        <a-camera look-controls="enabled: false"></a-camera>
+      </a-entity>
+
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" intensity="0.8" position="1 2 1"></a-light>
+
+      <a-plane rotation="-90 0 0" width="100" height="100" color="#ccc"></a-plane>
+
+      <a-assets>
+        <img id="brickTexture" src="../images/brick_bump.jpg" />
+      </a-assets>
+
+      <a-box position="0 2 0" width="5" height="4" depth="30" src="#brickTexture"></a-box>
+      <a-box position="13 2 13" width="28" height="4" depth="2" rotation="0 5 0" src="#brickTexture"></a-box>
+      <a-box position="13 2 -13" width="28" height="4" depth="2" rotation="0 -2 0" src="#brickTexture"></a-box>
+
+      <a-entity position="0 8 5">
+        <a-camera wasd-controls-enabled="true" look-controls-enabled="true"></a-camera>
+      </a-entity>  
+    </a-scene>
+  </body>
+</html>
